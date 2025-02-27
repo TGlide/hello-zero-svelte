@@ -4,7 +4,6 @@ import Cookies from 'js-cookie';
 import { schema } from './schema';
 
 const encodedJWT = Cookies.get('jwt');
-console.log(encodedJWT);
 const decodedJWT = encodedJWT && decodeJwt(encodedJWT);
 const userID = decodedJWT?.sub ? (decodedJWT.sub as string) : 'anon';
 
