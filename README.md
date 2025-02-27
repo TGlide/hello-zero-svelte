@@ -161,7 +161,7 @@ npm run docker-up
 npx zero-cache
 ```
 
-**3. Start your SVelte dev server**
+**3. Start your Svelte dev server**
 
 ```bash
 npm run dev # this depends on your react app setup
