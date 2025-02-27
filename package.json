@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev:ui": "vite dev",
-		"dev:zero-cache": "zero-cache-dev -p src/schema.ts",
+		"dev:zero-cache": "zero-cache-dev -p src/lib/schema.ts",
 		"dev:db-up": "docker compose --env-file .env -f ./docker/docker-compose.yml up",
 		"dev:db-down": "docker compose --env-file .env -f ./docker/docker-compose.yml down",
 		"dev:clean": "source .env && docker volume rm -f docker_zstart_pgdata && rm -rf \"${ZERO_REPLICA_FILE}\"*",
@@ -25,7 +25,8 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"runed": "^0.23.4",
-		"sst": "3.7.15"
+		"sst": "3.7.15",
+		"zero-svelte": "^0.2.0"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
