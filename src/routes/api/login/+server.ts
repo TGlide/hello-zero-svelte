@@ -42,7 +42,7 @@ export const GET: RequestHandler = async ({ cookies }) => {
 
 		cookies.set('jwt', jwt, {
 			path: '/',
-			httpOnly: true,
+			httpOnly: false,
 			sameSite: 'strict',
 			secure: process.env.NODE_ENV === 'production',
 			maxAge: 30 * 24 * 60 * 60 // 30 days in seconds

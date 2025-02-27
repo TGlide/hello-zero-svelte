@@ -116,6 +116,7 @@
 	};
 
 	const toggleLogin = async () => {
+		console.log(z.current.userID);
 		if (z.current.userID === 'anon') {
 			await fetch('/api/login');
 		} else {
@@ -198,7 +199,7 @@
 			{/if}
 		</em>
 	</div>
-	{#if filteredMessages.current.length}
+	{#if !filteredMessages.current.length}
 		<h3>
 			<em>No posts found 😢</em>
 		</h3>
