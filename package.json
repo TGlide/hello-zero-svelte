@@ -1,9 +1,10 @@
 {
-	"name": "hello-zero-svelte",
+	"name": "z-chat-svelte",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
+		"dev:all": "concurrently \"pnpm dev:db-up\" \"sleep 3 && pnpm dev:zero-cache\" \"sleep 5 && pnpm dev:ui\" ",
 		"dev:ui": "vite dev",
 		"dev:zero-cache": "zero-cache-dev -p src/lib/schema.ts",
 		"dev:db-up": "docker compose --env-file .env -f ./docker/docker-compose.yml up",
@@ -36,6 +37,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@types/js-cookie": "^3.0.6",
 		"@types/node": "^22.7.9",
+		"concurrently": "^9.1.2",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^2.46.1",
